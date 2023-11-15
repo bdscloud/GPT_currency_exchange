@@ -4,7 +4,7 @@ info:
   description: This plugin enables users to convert amounts between different currencies using real-time exchange rates.
   version: '1.0.0'
 servers:
-  - url: https://yourdomain.com  # Replace with your actual server URL
+  - url: https://github.com/bdscloud/GPT_currency_exchange/tree/main/.well-known/openapi.yaml  # Replace with your actual server URL
 paths:
   /convert:
     get:
