@@ -9,7 +9,7 @@
     },
     "api": {
         "type": "openapi",
-        "url": "https://yourdomain.com/openapi.yaml"  // Replace with your actual domain and path to OpenAPI specification
+        "url": "https://github.com/bdscloud/GPT_currency_exchange/tree/main/.well-known/ai-plugin.json"  // Replace with your actual domain and path to OpenAPI specification
     },
     "logo_url": "https://yourdomain.com/logo.png",  // Replace with the URL of your logo
     "contact_email": "support@yourdomain.com",     // Replace with your support email
