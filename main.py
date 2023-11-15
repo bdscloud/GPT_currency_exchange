@@ -1,3 +1,7 @@
+pip install requests
+import requests
+
+
 # Main Program
 api_key = "9f9d3f9dabaf4f97a6558cbad4ab1088"
 
