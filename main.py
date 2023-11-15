@@ -22,6 +22,7 @@ def convert_currency(amount, from_currency, to_currency, api_key):
     except requests.exceptions.RequestException as e:
         return {"error": str(e)}
 
+# https://github.com/bdscloud/GPT_currency_exchange/tree/main/convert
 @app.route('/convert', methods=['GET'])
 
 def handle_convert():
@@ -37,7 +38,8 @@ def handle_convert():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
+
+# https://github.com/bdscloud/GPT_currency_exchange/tree/main/.well-known/ai-plugin.json
 @app.route('/.well-known/ai-plugin.json')
 
 def serve_ai_plugin():
@@ -45,7 +47,7 @@ def serve_ai_plugin():
                              'ai-plugin.json',
                              mimetype='application/json')
 
-
+# https://github.com/bdscloud/GPT_currency_exchange/tree/main/.well-known/openapi.yaml
 @app.route('/.well-known/openapi.yaml')
 
 def serve_openapi_yaml():
