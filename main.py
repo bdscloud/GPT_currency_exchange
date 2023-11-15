@@ -1,5 +1,3 @@
-pip install requests
-pip install Flask
 from waitress import serve
 from flask import Flask, request, jsonify, send_from_directory
 import requests
