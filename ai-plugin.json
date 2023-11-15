@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Currency Converter",
+    "name_for_model": "currencyconverter",
+    "description_for_human": "Convert currency amounts between different currencies.",
+    "description_for_model": "This plugin converts currency amounts from one currency to another using real-time exchange rates.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://yourdomain.com/openapi.yaml"  // Replace with your actual domain and path to OpenAPI specification
+    },
+    "logo_url": "https://yourdomain.com/logo.png",  // Replace with the URL of your logo
+    "contact_email": "support@yourdomain.com",     // Replace with your support email
+    "legal_info_url": "http://www.yourdomain.com/legal"  // Replace with your legal information URL
+}
