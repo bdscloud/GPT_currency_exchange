@@ -1,0 +1,75 @@
+openapi: 3.0.1
+info:
+  title: Currency Converter Plugin
+  description: This plugin enables users to convert amounts between different currencies using real-time exchange rates.
+  version: '1.0.0'
+servers:
+  - url: https://yourdomain.com  # Replace with your actual server URL
+paths:
+  /convert:
+    get:
+      operationId: convertCurrency
+      summary: Convert currency from one unit to another
+      parameters:
+        - name: amount
+          in: query
+          required: true
+          description: The amount of money to convert
+          schema:
+            type: number
+            format: float
+        - name: from
+          in: query
+          required: true
+          description: The three-letter currency code of the currency you are converting from
+          schema:
+            type: string
+        - name: to
+          in: query
+          required: true
+          description: The three-letter currency code of the currency you want to convert to
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Currency conversion result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  query:
+                    type: object
+                    properties:
+                      from:
+                        type: string
+                      to:
+                        type: string
+                      amount:
+                        type: number
+                        format: float
+                  info:
+                    type: object
+                    properties:
+                      timestamp:
+                        type: integer
+                      rate:
+                        type: number
+                        format: float
+                  historical:
+                    type: string
+                  date:
+                    type: string
+                  result:
+                    type: number
+                    format: float
+        "400":
+          description: Bad request
+        "500":
+          description: Internal server error
+
+components:
+  schemas:
+    # Define your schemas here if necessary
