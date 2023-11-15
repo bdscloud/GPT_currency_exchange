@@ -22,6 +22,7 @@ def convert_currency(amount, from_currency, to_currency, api_key):
         return {"error": str(e)}
 
 @app.route('/convert', methods=['GET'])
+
 def handle_convert():
     amount = request.args.get('amount', type=float)
     from_currency = request.args.get('from')
@@ -35,3 +36,19 @@ def handle_convert():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+@app.route('/.well-known/ai-plugin.json')
+
+def serve_ai_plugin():
+  return send_from_directory('.',
+                             'ai-plugin.json',
+                             mimetype='application/json')
+
+
+@app.route('/.well-known/openapi.yaml')
+
+def serve_openapi_yaml():
+  return send_from_directory('.', 'openapi.yaml', mimetype='text/yaml')
+
+if __name__ == '__main__':
+  serve(app, host="0.0.0.0", port=8080)
